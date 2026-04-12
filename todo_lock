@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Todo Lock</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.7;
+      padding: 48px 24px 96px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 56px 64px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.05);
+    }
+
+    .app-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 48px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 40px 0;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #374151;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #374151;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #9ca3af;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    .contact a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 36px 28px; }
+      h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="app-label">Todo Lock — Private Photo &amp; Video Vault</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated: April 12, 2026</div>
+
+    <section>
+      <h2>Overview</h2>
+      <p>Todo Lock is designed with privacy as its core principle. The app operates entirely on your device and does not collect, transmit, or share any personal data.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Data Collection</h2>
+      <p>We do not collect any data. This includes:</p>
+      <ul>
+        <li>No personal information (name, email, phone number, etc.)</li>
+        <li>No photos or videos</li>
+        <li>No usage data or analytics</li>
+        <li>No crash reports sent to any server</li>
+        <li>No device identifiers</li>
+        <li>No location data</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Data Storage</h2>
+      <p>All content stored in the app — including photos, videos, tasks, and your vault password — is saved exclusively on your device using local storage. Nothing is uploaded to any server, cloud service, or third party.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>Todo Lock does not integrate any third-party SDKs, analytics tools, advertising networks, or external services. There are no third parties that receive any data from this app.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Internet Access</h2>
+      <p>Todo Lock does not require an internet connection and does not make any network requests. The app works entirely offline.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Account Registration</h2>
+      <p>Todo Lock does not require or support user accounts of any kind. No sign-up, login, or email address is needed.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>Todo Lock does not knowingly collect any data from anyone, including children under the age of 13. As no data is collected at all, the app is compliant with COPPA and similar regulations.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Security</h2>
+      <p>Your vault is protected by a password you set on first launch. That password is stored locally on your device and is never transmitted anywhere. We recommend choosing a strong, unique password.</p>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If this privacy policy changes in a future version of the app, the updated policy will be made available on the App Store listing and within the app. Continued use of the app after any changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <hr />
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy, please contact us at:<br />
+      <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </section>
+
+  </div>
+</body>
+</html>
