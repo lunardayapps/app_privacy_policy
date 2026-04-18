@@ -1,1 +1,592 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Alarm Lock</title>
+  <style>
+    :root {
+      --bg: #0f0f11;
+      --surface: #18181b;
+      --surface-2: #1f1f23;
+      --border: rgba(255,255,255,0.07);
+      --accent: #7c6af7;
+      --accent-glow: rgba(124,106,247,0.15);
+      --text: #e4e4e7;
+      --text-muted: #71717a;
+      --text-dim: #52525b;
+      --green: #4ade80;
+      --red: #f87171;
+      --yellow: #fbbf24;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ───────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, #13131a 0%, #1a1830 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,106,247,0.12) 0%, transparent 70%);
+      top: -160px; left: 50%; transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .app-icon {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, #6d5ef5 0%, #9f7ff4 100%);
+      border-radius: 18px;
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px;
+      box-shadow: 0 0 40px rgba(124,106,247,0.4);
+    }
+
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    header p.sub {
+      margin-top: 10px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 18px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(124,106,247,0.3);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 13px;
+      color: #a899f9;
+      font-weight: 500;
+    }
+
+    /* ── Layout ───────────────────────────────────────── */
+    main {
+      max-width: 760px;
+      margin: 56px auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── TL;DR Block ──────────────────────────────────── */
+    .tldr {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 48px;
+    }
+
+    .tldr-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .tldr-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tldr-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .tldr-list li .icon {
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Sections ─────────────────────────────────────── */
+    section {
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.2px;
+      margin-bottom: 16px;
+    }
+
+    section p, section li {
+      color: #a1a1aa;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    section ul, section ol {
+      margin-left: 20px;
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* ── Info Cards ───────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .card-icon { font-size: 24px; margin-bottom: 12px; }
+
+    .card h3 {
+      font-size: 14px; font-weight: 600; color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 13px; color: var(--text-muted); line-height: 1.6;
+    }
+
+    /* ── Highlight Boxes ──────────────────────────────── */
+    .highlight-box {
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .highlight-box.green {
+      background: rgba(74,222,128,0.06);
+      border: 1px solid rgba(74,222,128,0.2);
+    }
+
+    .highlight-box.yellow {
+      background: rgba(251,191,36,0.06);
+      border: 1px solid rgba(251,191,36,0.2);
+    }
+
+    .highlight-box.red {
+      background: rgba(248,113,113,0.06);
+      border: 1px solid rgba(248,113,113,0.2);
+    }
+
+    .highlight-box .hb-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    .highlight-box p {
+      font-size: 14px !important;
+      line-height: 1.65 !important;
+      color: var(--text-muted) !important;
+    }
+
+    .highlight-box strong { color: var(--text) !important; }
+
+    /* ── Divider ──────────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── Table ────────────────────────────────────────── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px 16px;
+      background: var(--surface-2);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    th:first-child { border-radius: 8px 0 0 8px; }
+    th:last-child  { border-radius: 0 8px 8px 0; }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #a1a1aa;
+      vertical-align: top;
+    }
+
+    td strong { color: var(--text); font-weight: 500; }
+
+    .dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+
+    .dot-green  { background: var(--green); }
+    .dot-red    { background: var(--red); }
+    .dot-yellow { background: var(--yellow); }
+
+    /* ── Footer ───────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    footer p { color: var(--text-dim); font-size: 13px; line-height: 1.7; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ───────────────────────────────────── */
+    @media (max-width: 560px) {
+      header { padding: 48px 20px 44px; }
+      main { margin: 36px auto; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header>
+  <div class="app-icon">🔒</div>
+  <h1>Privacy Policy</h1>
+  <p class="sub">Alarm Lock — Hidden Photo &amp; Video Vault</p>
+  <span class="badge">🍎 &nbsp;Apple App Store Compliant</span>
+</header>
+
+<!-- ── Main Content ───────────────────────────────────────────── -->
+<main>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <p class="tldr-title">The short version</p>
+    <ul class="tldr-list">
+      <li><span class="icon">🔒</span> <span>We collect <strong>zero personal data.</strong> No accounts. No sign-ups. No tracking.</span></li>
+      <li><span class="icon">📵</span> <span>The app works <strong>100% offline.</strong> Nothing is ever sent over the internet.</span></li>
+      <li><span class="icon">📁</span> <span>All your files stay <strong>on your device only.</strong> No cloud. No backups to external servers.</span></li>
+      <li><span class="icon">🗂️</span> <span>Your vault password and security answer are stored <strong>locally in your device's secure storage.</strong></span></li>
+      <li><span class="icon">⚠️</span> <span>Uninstalling the app <strong>permanently deletes all vault files.</strong> There is no recovery.</span></li>
+    </ul>
+  </div>
+
+  <!-- 1. Overview -->
+  <section>
+    <p class="section-label">01 — Overview</p>
+    <h2>Our Privacy Commitment</h2>
+    <p>
+      Alarm Lock ("the App", "we", "us") is a private, local-only security application. 
+      This Privacy Policy describes the information practices of the App. Because the App 
+      is designed specifically to protect your private media, privacy is not an afterthought — 
+      it is the foundation of everything we build.
+    </p>
+    <p style="margin-top: 14px;">
+      This policy applies to the Alarm Lock iOS application available on the Apple App Store. 
+      By using the App, you agree to the practices described in this document.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- 2. Data Collection -->
+  <section>
+    <p class="section-label">02 — Data Collection</p>
+    <h2>Information We Collect</h2>
+    <p>
+      <strong style="color:#fff;">We do not collect, transmit, store, or share any personal information.</strong>
+    </p>
+
+    <div class="card-grid" style="margin-top: 24px;">
+      <div class="card">
+        <div class="card-icon">🚫</div>
+        <h3>No Account Required</h3>
+        <p>The App never asks for your name, email address, phone number, or any identifying information.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📡</div>
+        <h3>No Network Activity</h3>
+        <p>The App makes no outbound network requests. All operations are performed entirely on-device.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🍪</div>
+        <h3>No Cookies or Tracking</h3>
+        <p>We use no cookies, analytics SDKs, advertising trackers, or third-party data services.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>No Analytics</h3>
+        <p>We do not collect usage statistics, crash reports, or any diagnostic data from your device.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- 3. Local Data -->
+  <section>
+    <p class="section-label">03 — Local Storage</p>
+    <h2>What the App Stores on Your Device</h2>
+    <p>
+      The App stores the following data <strong style="color:#fff;">exclusively on your local device</strong>, 
+      inside the app's private sandbox, inaccessible to other apps:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Storage Location</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vault password (hashed)</strong></td>
+          <td>iOS UserDefaults (shared_preferences)</td>
+          <td>Authenticates access to the hidden vault</td>
+        </tr>
+        <tr>
+          <td><strong>Security question &amp; answer</strong></td>
+          <td>iOS UserDefaults (shared_preferences)</td>
+          <td>Allows password recovery if forgotten</td>
+        </tr>
+        <tr>
+          <td><strong>Alarm data</strong> (time, label, toggle state)</td>
+          <td>Local SQLite database</td>
+          <td>Powers the decoy alarm clock interface</td>
+        </tr>
+        <tr>
+          <td><strong>Imported photos &amp; videos</strong></td>
+          <td>App Documents directory</td>
+          <td>Stored privately inside the vault folders you create</td>
+        </tr>
+        <tr>
+          <td><strong>Video thumbnails</strong></td>
+          <td>App Documents directory</td>
+          <td>Preview images generated locally for video files</td>
+        </tr>
+        <tr>
+          <td><strong>Onboarding completion flag</strong></td>
+          <td>iOS UserDefaults</td>
+          <td>Tracks whether setup has been completed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box green" style="margin-top: 24px;">
+      <span class="hb-icon">✅</span>
+      <p>All data listed above <strong>never leaves your device</strong>. It is not synced to iCloud, backed up to external servers, or accessible to us or any third party in any way.</p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- 4. Permissions -->
+  <section>
+    <p class="section-label">04 — Device Permissions</p>
+    <h2>App Permissions</h2>
+    <p>The App may request the following iOS permissions. Each is used solely for the local feature described:</p>
+
+    <div class="card-grid" style="margin-top: 24px;">
+      <div class="card">
+        <div class="card-icon">🖼️</div>
+        <h3>Photo Library Access</h3>
+        <p>Required to let you select photos and videos from your gallery to import into the vault. Nothing is uploaded anywhere.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔔</div>
+        <h3>Notifications (Optional)</h3>
+        <p>May be used in future versions to surface alarm reminders locally on-device. Never used for marketing.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box yellow" style="margin-top: 20px;">
+      <span class="hb-icon">ℹ️</span>
+      <p>You may revoke any permission at any time in <strong>iOS Settings → Privacy &amp; Security</strong>. Revoking Photo Library access will prevent importing new files but will not affect files already inside the vault.</p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- 5. Third Parties -->
+  <section>
+    <p class="section-label">05 — Third Parties</p>
+    <h2>Third-Party Services</h2>
+    <p>
+      Alarm Lock does <strong style="color:#fff;">not</strong> use any third-party services that collect data. 
+      The App uses only the following open-source Flutter packages, all of which operate entirely on-device:
+    </p>
+
+    <ul style="margin-top: 16px;">
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">sqflite</strong> — local SQLite database for alarm storage</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">shared_preferences</strong> — local key-value storage for settings</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">path_provider</strong> — accesses device file system paths locally</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">photo_manager</strong> — reads your photo library locally on-device only</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">video_player</strong> — plays video files stored locally</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">haptic_feedback</strong> — triggers on-device haptic vibrations</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">in_app_review</strong> — may prompt you to rate the app via Apple's native review dialog. Apple's standard privacy practices apply.</li>
+      <li><span class="dot dot-green"></span><strong style="color:#fff;">google_fonts</strong> — loads font files that are bundled with the app at build time. No runtime network calls are made.</li>
+    </ul>
+
+    <p style="margin-top: 20px;">None of these packages transmit data externally. No advertising, analytics, or crash-reporting SDKs are included.</p>
+  </section>
+
+  <hr />
+
+  <!-- 6. Children -->
+  <section>
+    <p class="section-label">06 — Children's Privacy</p>
+    <h2>Children Under 13</h2>
+    <p>
+      The App is not directed at children under the age of 13 and is not intended for use by minors. 
+      We do not knowingly collect any personal information from children. Because the App collects 
+      no personal data whatsoever, no special risk exists; however, parental guidance is advised for 
+      minors using security or vault applications.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- 7. Data Security -->
+  <section>
+    <p class="section-label">07 — Security</p>
+    <h2>Data Security</h2>
+    <p>
+      Because all data is stored locally on your device, the security of your files depends on 
+      the security of your device itself. We strongly recommend:
+    </p>
+    <ul>
+      <li>Setting a strong device passcode or Face ID / Touch ID.</li>
+      <li>Keeping iOS updated to receive the latest security patches.</li>
+      <li>Choosing a unique, hard-to-guess vault password that you will remember.</li>
+      <li>Not sharing your device with untrusted individuals.</li>
+    </ul>
+
+    <div class="highlight-box red" style="margin-top: 20px;">
+      <span class="hb-icon">⚠️</span>
+      <p><strong>Important:</strong> Uninstalling or deleting the App <strong>permanently and irrecoverably destroys all vault contents</strong>, including all photos and videos you have imported. There is no cloud backup and no way to recover deleted files. Always ensure you have copies of important media before managing the app.</p>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- 8. Your Rights -->
+  <section>
+    <p class="section-label">08 — Your Rights</p>
+    <h2>Your Rights &amp; Controls</h2>
+    <p>
+      Because the App stores no personal information on external servers, standard data-subject 
+      rights (access, deletion, portability) apply entirely within your own device:
+    </p>
+    <ul>
+      <li><strong style="color:#fff;">Access your data</strong> — all data is on your device, in the app's private files.</li>
+      <li><strong style="color:#fff;">Delete your data</strong> — delete individual files from within the app, or uninstall the app to erase everything.</li>
+      <li><strong style="color:#fff;">Reset preferences</strong> — reset your vault password or security question at any time from within the vault settings.</li>
+    </ul>
+    <p style="margin-top: 14px;">
+      If you are in a jurisdiction with specific privacy rights (such as GDPR or CCPA), 
+      as we hold no personal data about you, there is nothing to request, correct, or transfer from our side.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- 9. Changes -->
+  <section>
+    <p class="section-label">09 — Updates</p>
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, the "Last Updated" date 
+      at the bottom of this page will be revised. Continued use of the App after a policy update 
+      constitutes your acceptance of the revised terms. For material changes, we will provide 
+      notice within the App or on the App Store listing.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- 10. Contact -->
+  <section>
+    <p class="section-label">10 — Contact</p>
+    <h2>Contact Us</h2>
+    <p>
+      If you have questions, concerns, or requests relating to this Privacy Policy, 
+      please reach out:
+    </p>
+    <div class="card" style="margin-top: 20px; max-width: 400px;">
+      <div class="card-icon">✉️</div>
+      <h3>Alarm Lock Support</h3>
+      <p>Email: <a href="mailto:support@alarmlockapp.com" style="color:var(--accent);">support@alarmlockapp.com</a></p>
+      <p style="margin-top: 6px;">We aim to respond within 5 business days.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────────── -->
+<footer>
+  <p>
+    <strong style="color:#fff;">Alarm Lock</strong> &nbsp;·&nbsp; Available on the Apple App Store<br />
+    Last Updated: <strong style="color:#fff;">April 18, 2026</strong>
+    &nbsp;·&nbsp; Effective Date: <strong style="color:#fff;">April 18, 2026</strong>
+  </p>
+  <p style="margin-top: 10px;">
+    This app does not collect, store, or share any personal data outside of your device.<br />
+    Made with privacy in mind. &nbsp;🔒
+  </p>
+</footer>
+
+</body>
+</html>
