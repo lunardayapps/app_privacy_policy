@@ -99,7 +99,7 @@
 
   <header>
     <h1>Privacy Policy</h1>
-    <p>Pregnancy Safe &mdash; Last updated: May 8, 2026</p>
+    <p>Pregnancy Safe &mdash; Last updated: May 14, 2026</p>
   </header>
 
   <main>
@@ -169,6 +169,53 @@
         <li>To improve App performance and fix technical issues.</li>
       </ul>
       <p>We do not sell, rent, or share your personal information with advertisers or marketing companies.</p>
+    </section>
+
+    <section>
+      <h2>AI Data Processing &amp; Your Consent</h2>
+      <p>
+        Pregnancy Safe uses an AI-powered backend to generate product safety analyses and to power
+        the Mama AI chat feature. Before these features are activated, the App explicitly asks for
+        your permission during onboarding. You may withdraw or re-grant consent at any time in
+        <strong>Profile → AI &amp; Privacy</strong>.
+      </p>
+
+      <p><strong>What data is sent to the AI service</strong></p>
+      <ul>
+        <li>Your first name (if provided during onboarding), used to personalise AI responses.</li>
+        <li>Product names, brands, categories, ingredient lists, and allergen labels retrieved from scanned barcodes.</li>
+        <li>Ingredient text captured by your device camera (on-device OCR output).</li>
+        <li>Messages you send to the Mama AI chat assistant.</li>
+        <li>Your pregnancy profile context — pregnancy stage, trimester, whether this is your first pregnancy, focus areas, and dietary preferences — used to personalise AI responses.</li>
+      </ul>
+
+      <p><strong>Who receives the data</strong></p>
+      <p>
+        The data listed above is sent to our AI safety backend, which is hosted on
+        <strong>Cloudflare Workers</strong> infrastructure. The backend uses
+        <strong>Cloudflare Workers AI</strong> (and, depending on configuration, other AI model
+        providers such as Google Gemini or OpenRouter) to generate safety results and chat answers.
+        Each provider is governed by its own privacy policy:
+      </p>
+      <ul>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy (Gemini)</a></li>
+        <li><a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter Privacy Policy</a></li>
+      </ul>
+
+      <p><strong>How the data is used</strong></p>
+      <ul>
+        <li>Solely to produce the safety analysis result or chat answer that is displayed to you in the App.</li>
+        <li>All requests are encrypted in transit (HTTPS) and authenticated with Firebase App Check tokens to prevent unauthorised access.</li>
+        <li>Message and ingredient content is <em>not</em> permanently stored by us on the backend.</li>
+      </ul>
+
+      <p><strong>If you decline AI consent</strong></p>
+      <p>
+        If you decline or later withdraw AI consent, no personal data will be sent to any AI service.
+        Barcode product lookups (using open product databases) will continue to work, but
+        AI safety analysis and the Mama AI chat assistant will be disabled until consent is re-granted.
+      </p>
     </section>
 
     <section>
