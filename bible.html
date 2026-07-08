@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Bible AI Reader</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #d97706;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border: #e2e8f0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #60a5fa;
+                --primary-light: #93c5fd;
+                --accent: #f59e0b;
+                --bg: #0f172a;
+                --card-bg: #1e293b;
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 16px;
+            font-size: 32px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: rgba(59, 130, 246, 0.08);
+            border-left: 4px solid var(--primary-light);
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">📖</div>
+            <h1>Privacy Policy</h1>
+            <div class="last-updated">Last Updated: July 7, 2026</div>
+        </header>
+
+        <section>
+            <h2>1. Overview & Core Principles</h2>
+            <p>At <strong>Bible AI Reader</strong>, we believe that your spiritual journey is deeply personal. We are committed to safeguarding your privacy and ensuring you have complete visibility and control over your data. We build our app under the following fundamental core principles:</p>
+            <ul>
+                <li><strong>Local First:</strong> Personal configuration, readings, and logs remain on your device. We do not maintain remote cloud user accounts.</li>
+                <li><strong>Minimal Transmission:</strong> Only the specific inputs needed to generate your scriptural devotionals are sent to third-party AI APIs.</li>
+                <li><strong>No Commercial Sale:</strong> We never sell, rent, or monetize your profile data or personal inputs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Data Collected & Stored Locally</h2>
+            <p>Most of the data you enter during onboarding or while using the app is stored <strong>locally in secure storage</strong> on your device (using SharedPreferences and local databases). This data does not leave your device unless you request it. This includes:</p>
+            <ul>
+                <li><strong>Profile Details:</strong> Your name, gender preference (used to personalize greetings), age bracket, and selected spiritual focus goals.</li>
+                <li><strong>Reading Logs:</strong> Completed Bible chapters, reading streaks, and saved favorites/bookmarks.</li>
+                <li><strong>Daily Reminder Configs:</strong> Preferred Morning (🌅) and Evening (🌙) reminder notification times.</li>
+            </ul>
+            <div class="highlight-box">
+                <p>💡 Note: You can delete all locally stored data at any time by clearing the application storage inside your device settings or uninstalling the app.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Data Shared with Artificial Intelligence (AI)</h2>
+            <p>To provide custom generated scripture reflection passages, prayers, and insights tailored specifically to you, the app integrates with secure Artificial Intelligence API providers. The following details how your inputs are handled:</p>
+            <ul>
+                <li><strong>Zoned Prompts:</strong> When you describe how you are feeling or what is on your mind in the connection chat, that text is sent to the secure AI API models to generate your customized devotional flashcards.</li>
+                <li><strong>No PII Attached:</strong> We do <strong>not</strong> send your real name, gender preference, age, or contact details to the AI provider. Prompts are fully anonymized.</li>
+                <li><strong>Secure Channels:</strong> All communication with the AI APIs is transmitted using SSL/TLS encrypted HTTPS endpoints.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Third-Party Services</h2>
+            <p>Our app leverages secure third-party processing to enable key features:</p>
+            <ul>
+                <li><strong>AI Services:</strong> Text prompts are processed securely by our AI API providers (such as Google Gemini) to generate scripture devotionals. These processors are contractually bound to not use your prompts for model training.</li>
+                <li><strong>Local Notifications:</strong> System alerts are managed locally by the operating system kernel (iOS UserNotificationCenter / Android AlarmManager) and do not contact third-party tracking services.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Your Rights & Choices</h2>
+            <p>You remain in complete control of your data:</p>
+            <ul>
+                <li><strong>Notification Control:</strong> You can enable, disable, or change the timing of your Morning and Evening reminders directly within the Profile screen at any time.</li>
+                <li><strong>Permissions:</strong> You can grant or revoke notification permissions anytime via your device's native system settings.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" timestamp at the top of the policy document.</p>
+        </section>
+
+        <footer>
+            &copy; 2026 Bible AI Reader. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
