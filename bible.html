@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Bible AI Reader</title>
+    <title>Privacy Policy | Paradise</title>
     <style>
         :root {
             --primary: #1e3a8a;
-            --primary-light: #3b82f6;
+            --primary-light: #2563eb;
             --accent: #d97706;
             --bg: #f8fafc;
             --card-bg: #ffffff;
             --text-primary: #0f172a;
             --text-secondary: #475569;
             --border: #e2e8f0;
+            --table-header: #f1f5f9;
+            --badge-green-bg: #dcfce7;
+            --badge-green-text: #15803d;
+            --badge-blue-bg: #dbeafe;
+            --badge-blue-text: #1e40af;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -26,6 +32,11 @@
                 --text-primary: #f8fafc;
                 --text-secondary: #94a3b8;
                 --border: #334155;
+                --table-header: #334155;
+                --badge-green-bg: #064e3b;
+                --badge-green-text: #6ee7b7;
+                --badge-blue-bg: #1e3a8a;
+                --badge-blue-text: #93c5fd;
             }
         }
 
@@ -39,8 +50,17 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+        a {
+            color: var(--primary-light);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 860px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -78,6 +98,36 @@
             color: var(--text-secondary);
         }
 
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        .summary-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary-card p {
+            margin: 0;
+            font-size: 0.92rem;
+        }
+
         section {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
@@ -98,7 +148,8 @@
             gap: 10px;
         }
 
-        p, li {
+        p,
+        li {
             color: var(--text-secondary);
             font-size: 1rem;
         }
@@ -125,6 +176,49 @@
             color: var(--text-primary);
         }
 
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        .badge-green {
+            background-color: var(--badge-green-bg);
+            color: var(--badge-green-text);
+        }
+
+        .badge-blue {
+            background-color: var(--badge-blue-bg);
+            color: var(--badge-blue-text);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background-color: var(--table-header);
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -133,68 +227,207 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <div class="logo-container">📖</div>
             <h1>Privacy Policy</h1>
-            <div class="last-updated">Last Updated: July 7, 2026</div>
+            <div class="last-updated">Last Updated: July 25, 2026</div>
         </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <h3>🔒 Local-First Storage</h3>
+                <p>Your reading history, bookmarks, notes, and streak logs stay on your device.</p>
+            </div>
+            <div class="summary-card">
+                <h3>🛡️ Anonymous AI Processing</h3>
+                <p>Requests send zero personal identifiers. Authentication relies on anonymous session keys.</p>
+            </div>
+            <div class="summary-card">
+                <h3>🚫 No Data Selling</h3>
+                <p>We do not monetize, share, or sell your personal inputs or spiritual preferences.</p>
+            </div>
+        </div>
 
         <section>
             <h2>1. Overview & Core Principles</h2>
-            <p>At <strong>Bible AI Reader</strong>, we believe that your spiritual journey is deeply personal. We are committed to safeguarding your privacy and ensuring you have complete visibility and control over your data. We build our app under the following fundamental core principles:</p>
+            <p>At <strong>Bible AI Reader</strong>, we believe that your spiritual journey is deeply personal. We are
+                committed to safeguarding your privacy and ensuring you have complete visibility and control over your
+                data. We build our app under the following fundamental core principles:</p>
             <ul>
-                <li><strong>Local First:</strong> Personal configuration, readings, and logs remain on your device. We do not maintain remote cloud user accounts.</li>
-                <li><strong>Minimal Transmission:</strong> Only the specific inputs needed to generate your scriptural devotionals are sent to third-party AI APIs.</li>
-                <li><strong>No Commercial Sale:</strong> We never sell, rent, or monetize your profile data or personal inputs.</li>
+                <li><strong>Local First:</strong> Personal configuration, reading streaks, and logs remain on your
+                    device. We do not maintain remote cloud user accounts with email addresses or social logins.</li>
+                <li><strong>Minimal AI Transmission:</strong> Only the specific inputs required to generate your
+                    requested devotionals, guides, audio, or chat answers are sent to third-party AI backend services.
+                </li>
+                <li><strong>No Model Training:</strong> API processors and routing providers (including OpenRouter)
+                    process requests transiently for generation only. Your prompts are not used to train AI models.</li>
             </ul>
         </section>
 
         <section>
-            <h2>2. Data Collected & Stored Locally</h2>
-            <p>Most of the data you enter during onboarding or while using the app is stored <strong>locally in secure storage</strong> on your device (using SharedPreferences and local databases). This data does not leave your device unless you request it. This includes:</p>
+            <h2>2. Data Collected & Stored Strictly On-Device</h2>
+            <p>The vast majority of data generated while using Bible AI Reader is stored <strong>locally in secure
+                    storage</strong> on your device (using SharedPreferences and local databases). This data
+                <strong>never leaves your device</strong>:
+            </p>
             <ul>
-                <li><strong>Profile Details:</strong> Your name, gender preference (used to personalize greetings), age bracket, and selected spiritual focus goals.</li>
-                <li><strong>Reading Logs:</strong> Completed Bible chapters, reading streaks, and saved favorites/bookmarks.</li>
-                <li><strong>Daily Reminder Configs:</strong> Preferred Morning (🌅) and Evening (🌙) reminder notification times.</li>
+                <li><strong>Reading History & Streaks:</strong> Completed Bible chapters, daily reading streaks, and
+                    streak repair items.</li>
+                <li><strong>Bookmarks & Favorites:</strong> Saved scriptures, favorite devotionals, and personal study
+                    notes.</li>
+                <li><strong>Daily Notification Schedules:</strong> Preferred Morning (🌅) and Evening (🌙) reminder
+                    notification times.</li>
+                <li><strong>Local App Settings:</strong> Selected theme, text font size preferences, and offline cache
+                    storage.</li>
             </ul>
             <div class="highlight-box">
-                <p>💡 Note: You can delete all locally stored data at any time by clearing the application storage inside your device settings or uninstalling the app.</p>
+                <p>💡 Note: You can clear all locally stored data at any time by clearing application data in your
+                    device settings or by uninstalling the app.</p>
             </div>
         </section>
 
         <section>
-            <h2>3. Data Shared with Artificial Intelligence (AI)</h2>
-            <p>To provide custom generated scripture reflection passages, prayers, and insights tailored specifically to you, the app integrates with secure Artificial Intelligence API providers. The following details how your inputs are handled:</p>
+            <h2>3. Detailed Disclosure: Data Sent to AI Services</h2>
+            <p>To provide custom scripture reflections, study guides, AI companion chat responses, and natural voice
+                narration, Bible AI Reader connects to secure AI backend microservices routed via
+                <strong>OpenRouter</strong> and specialized AI models. Below is a full, transparent breakdown of what is
+                transmitted when you use each feature:
+            </p>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Data Transmitted to AI Backend</th>
+                            <th>Purpose of Transmission</th>
+                            <th>Transmission Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AI Spiritual Companion & Chat</strong></td>
+                            <td>
+                                <ul>
+                                    <li>User typed chat messages & questions</li>
+                                    <li>Session message history (role & text)</li>
+                                    <li>Optional feature context (e.g. passage being discussed)</li>
+                                </ul>
+                            </td>
+                            <td>Generates real-time conversational responses, verse explanations, and theological
+                                answers.</td>
+                            <td><span class="badge badge-green">Anonymous</span> <span class="badge badge-blue">HTTPS
+                                    Encrypted via OpenRouter</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personalized Devotionals</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Topic/Emotion prompt (e.g. "Hope", "Anxiety")</li>
+                                    <li>Preferred display name (e.g. "John" or "Friend")</li>
+                                    <li>Selected Bible translation (e.g. NIV, KJV)</li>
+                                    <li>List of recently suggested verse references</li>
+                                </ul>
+                            </td>
+                            <td>Crafts custom devotional flashcards including focus scripture, reflection text, tailored
+                                prayer, and tags without repeating recent verses.</td>
+                            <td><span class="badge badge-green">Anonymous</span> <span class="badge badge-blue">HTTPS
+                                    Encrypted via OpenRouter</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chapter Study Guides & Summaries</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Bible book name & chapter number (e.g. "John 3")</li>
+                                    <li>Standard summary prompt text</li>
+                                </ul>
+                            </td>
+                            <td>Generates theological chapter summaries, key takeaways, and structured reading guides.
+                            </td>
+                            <td><span class="badge badge-green">Anonymous</span> <span class="badge badge-blue">HTTPS
+                                    Encrypted via OpenRouter</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Audio / Text-to-Speech (MeloTTS)</strong></td>
+                            <td>
+                                <ul>
+                                    <li>Scripture verse text or devotional snippet</li>
+                                    <li>Voice speaker selection parameter</li>
+                                </ul>
+                            </td>
+                            <td>Synthesizes human-quality audio narration via Cloudflare Workers AI.</td>
+                            <td><span class="badge badge-green">Anonymous</span> <span class="badge badge-blue">HTTPS
+                                    Encrypted</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Security & Anonymity Controls</h3>
             <ul>
-                <li><strong>Zoned Prompts:</strong> When you describe how you are feeling or what is on your mind in the connection chat, that text is sent to the secure AI API models to generate your customized devotional flashcards.</li>
-                <li><strong>No PII Attached:</strong> We do <strong>not</strong> send your real name, gender preference, age, or contact details to the AI provider. Prompts are fully anonymized.</li>
-                <li><strong>Secure Channels:</strong> All communication with the AI APIs is transmitted using SSL/TLS encrypted HTTPS endpoints.</li>
+                <li><strong>No Personally Identifiable Information (PII):</strong> We do <strong>not</strong> send email
+                    addresses, phone numbers, real names, contacts, photos, or location data to OpenRouter or AI model
+                    providers.</li>
+                <li><strong>Anonymous Authentication Tokens:</strong> API requests carry an anonymous Firebase Auth
+                    token and a Firebase App Check token solely to verify request authenticity and prevent automated
+                    abuse.</li>
+                <li><strong>Encrypted Channels:</strong> All communication with backend endpoints and OpenRouter API
+                    gateways is protected via TLS 1.3 / SSL encrypted HTTPS requests.</li>
             </ul>
         </section>
 
         <section>
-            <h2>4. Third-Party Services</h2>
-            <p>Our app leverages secure third-party processing to enable key features:</p>
+            <h2>4. Third-Party Infrastructure & Service Providers</h2>
+            <p>Our application leverages secure third-party infrastructure providers to execute AI features and ensure
+                reliability:</p>
             <ul>
-                <li><strong>AI Services:</strong> Text prompts are processed securely by our AI API providers (such as Google Gemini) to generate scripture devotionals. These processors are contractually bound to not use your prompts for model training.</li>
-                <li><strong>Local Notifications:</strong> System alerts are managed locally by the operating system kernel (iOS UserNotificationCenter / Android AlarmManager) and do not contact third-party tracking services.</li>
+                <li>
+                    <strong>OpenRouter (OpenRouter Inc.):</strong>
+                    We route AI text generation requests (companion chat, personal devotionals, chapter study guides)
+                    through OpenRouter's secure API routing platform. Requests are transmitted anonymously without
+                    personal account identifier links. Prompts sent via OpenRouter are processed transiently for
+                    generation only and are governed by zero data retention policies where supported. For details, view
+                    the official <a href="https://openrouter.ai/privacy" target="_blank"
+                        rel="noopener noreferrer">OpenRouter Privacy Policy</a>.
+                </li>
+                <li>
+                    <strong>Cloudflare Workers AI:</strong>
+                    Processes natural text-to-speech audio requests (MeloTTS) and backend API routing transiently.
+                    Cloudflare is contractually bound to process data strictly for fulfillment.
+                </li>
+                <li>
+                    <strong>Firebase (Authentication & App Check):</strong>
+                    Provides anonymous user session IDs and device attestation tokens to secure backend API endpoints
+                    without collecting personal user profiles.
+                </li>
+                <li>
+                    <strong>Local System Frameworks:</strong>
+                    Notification alerts and media playback utilize native iOS (UserNotifications, AudioToolbox) and
+                    Android (AlarmManager, MediaPlayer) operating system APIs locally on device.
+                </li>
             </ul>
         </section>
 
         <section>
-            <h2>5. Your Rights & Choices</h2>
-            <p>You remain in complete control of your data:</p>
+            <h2>5. Your Privacy Rights & Choices</h2>
+            <p>You maintain full ownership and control over your preferences:</p>
             <ul>
-                <li><strong>Notification Control:</strong> You can enable, disable, or change the timing of your Morning and Evening reminders directly within the Profile screen at any time.</li>
-                <li><strong>Permissions:</strong> You can grant or revoke notification permissions anytime via your device's native system settings.</li>
+                <li><strong>Notification Preferences:</strong> Toggle or reschedule Morning and Evening notification
+                    reminders inside Profile settings.</li>
+                <li><strong>Data Deletion:</strong> Clear chat history within the AI Companion screen or reset app
+                    storage via your device settings to wipe all local data.</li>
+                <li><strong>System Permissions:</strong> Grant or revoke notification or audio permissions anytime via
+                    system settings.</li>
             </ul>
         </section>
 
         <section>
             <h2>6. Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" timestamp at the top of the policy document.</p>
+            <p>We may update our Privacy Policy periodically to reflect new features, partner disclosures, or regulatory
+                requirements. Any updates will be published on this page with an updated "Last Updated" timestamp.</p>
         </section>
 
         <footer>
@@ -202,4 +435,5 @@
         </footer>
     </div>
 </body>
+
 </html>
