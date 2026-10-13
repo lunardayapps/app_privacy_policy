@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for Boxing Timer & Combat Clock. Learn how we protect your privacy with a 100% offline, zero-tracking, on-device architecture.">
+  <meta name="author" content="Lunar Day">
+  <title>Privacy Policy - Boxing Timer & Combat Clock</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0b0e;
+      --bg-secondary: #12141a;
+      --bg-card: rgba(22, 26, 35, 0.75);
+      --bg-card-hover: rgba(28, 33, 45, 0.9);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(244, 63, 94, 0.35);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-red: #e11d48;
+      --accent-red-glow: rgba(225, 29, 72, 0.25);
+      --accent-gold: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-cyan: #06b6d4;
+      --badge-bg: rgba(225, 29, 72, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background lighting */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -200px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: -200px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header & Branding */
+    header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-accent);
+      color: #fda4af;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px var(--accent-red-glow);
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-desc {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-item strong {
+      color: var(--text-secondary);
+    }
+
+    /* Key Guarantee Highlights Banner */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .highlight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .highlight-icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .highlight-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .highlight-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* Content Cards */
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(12px);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-title .section-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-red);
+      background: var(--badge-bg);
+      border: 1px solid var(--border-accent);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin: 24px 0 12px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      color: var(--text-secondary);
+      padding-left: 24px;
+      margin-bottom: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-primary);
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+      background: var(--bg-secondary);
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 14px 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      border-bottom: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-secure {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-local {
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .badge-hardware {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    /* Callout Boxes */
+    .callout {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin: 20px 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .callout-icon {
+      font-size: 22px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .callout-content p {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .callout-alert {
+      background: rgba(225, 29, 72, 0.08);
+      border-color: rgba(225, 29, 72, 0.3);
+    }
+
+    .callout-alert .callout-content p {
+      color: #fecdd3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    footer a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 24px 16px 60px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .policy-section {
+        padding: 24px 18px;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand-pill">
+        <span>🥊</span>
+        <span>Combat Clock &bull; Privacy First</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="header-desc">
+        Combat Clock (Boxing Timer) is engineered with an uncompromising privacy-by-design standard. 
+        Your workouts, profile, and settings are strictly your business.
+      </p>
+      <div class="meta-bar">
+        <div class="meta-item">
+          <strong>Application:</strong> Boxing Timer (Combat Clock)
+        </div>
+        <div class="meta-item">
+          <strong>Package ID:</strong> com.lunarday.boxing.timer
+        </div>
+        <div class="meta-item">
+          <strong>Effective Date:</strong> October 13, 2026
+        </div>
+        <div class="meta-item">
+          <strong>Version:</strong> 1.0.0
+        </div>
+      </div>
+    </header>
+
+    <!-- Key Highlights Grid -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <span class="highlight-icon">🔒</span>
+        <div class="highlight-title">100% Offline</div>
+        <div class="highlight-subtitle">Operates completely without internet connectivity. No cloud servers, no databases.</div>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon">🚫</span>
+        <div class="highlight-title">Zero Analytics</div>
+        <div class="highlight-subtitle">No trackers, no telemetry SDKs, no behavioral cookies, and no advertising identifiers.</div>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon">📱</span>
+        <div class="highlight-title">Local Storage Only</div>
+        <div class="highlight-subtitle">All timer routines, stats, and profile details stay sandboxed exclusively on your device.</div>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon">👤</span>
+        <div class="highlight-title">No Account Required</div>
+        <div class="highlight-subtitle">No email, username, phone number, password, or third-party social logins required.</div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <section class="policy-section" id="overview">
+      <div class="section-title">
+        <span class="section-num">01</span>
+        <h2>Executive Summary & Architecture</h2>
+      </div>
+      <p>
+        This Privacy Policy explains how <strong>Boxing Timer</strong> ("Combat Clock", "we", "us", or "our") 
+        handles information when you use our mobile application across iOS and Android devices.
+      </p>
+      <p>
+        Unlike typical fitness apps that upload training regimens, health metrics, and biometric profiles to 
+        remote commercial cloud servers, <strong>Combat Clock operates entirely offline</strong>. 
+        We do not own, operate, or maintain any backend servers that receive, collect, or store your personal information.
+      </p>
+      <div class="callout">
+        <span class="callout-icon">🛡️</span>
+        <div class="callout-content">
+          <p>
+            <strong>Under Apple App Store Nutrition Labels and Google Play Data Safety standards:</strong><br>
+            Combat Clock qualifies for <strong>"Data Not Collected"</strong>. We do not track you across apps or websites, 
+            and we do not sell or monetize personal data in any form.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="policy-section" id="data-not-collected">
+      <div class="section-title">
+        <span class="section-num">02</span>
+        <h2>Information We Do NOT Collect</h2>
+      </div>
+      <p>
+        To provide complete transparency, our application has deliberately been built without the capability 
+        to access, harvest, or transmit any of the following categories of data:
+      </p>
+      <ul>
+        <li><strong>Personal Identifiable Information (PII):</strong> No real names, physical addresses, email addresses, phone numbers, or government IDs.</li>
+        <li><strong>Location Data:</strong> No GPS, Wi-Fi location, IP geolocation, or background location tracking.</li>
+        <li><strong>Biometric Data:</strong> No facial recognition, fingerprint data, or camera sensor biometric scans.</li>
+        <li><strong>Financial or Payment Data:</strong> No credit card numbers, billing addresses, or banking details.</li>
+        <li><strong>Device Identifiers & Tracking:</strong> No Apple IDFA (Identifier for Advertisers), Google Advertising ID (AAID), or persistent cross-app tracking fingerprints.</li>
+        <li><strong>Network Traffic:</strong> No remote server calls. The application contains zero HTTP/REST API endpoints.</li>
+      </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="policy-section" id="local-storage">
+      <div class="section-title">
+        <span class="section-num">03</span>
+        <h2>Information Stored Strictly on Your Device</h2>
+      </div>
+      <p>
+        Any data generated by your training sessions is stored exclusively inside your device's private, encrypted 
+        application sandbox (via standard platform storage mechanisms: <code>NSUserDefaults</code> on iOS and <code>SharedPreferences</code> on Android). 
+        This data never leaves your hardware.
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Category</th>
+              <th>Specific Items Stored</th>
+              <th>Storage Location</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Fighter Profile</strong></td>
+              <td>Fighter alias/nickname, stance (Orthodox/Southpaw), primary discipline (Boxing, MMA, Muay Thai, BJJ).</td>
+              <td><span class="badge badge-local">Local Sandbox</span></td>
+              <td>Personalizes on-screen motivational prompts and stance callouts.</td>
+            </tr>
+            <tr>
+              <td><strong>Onboarding Responses</strong></td>
+              <td>Optional survey choices (gender bracket, age bracket, experience level, fitness goal, weekly training frequency).</td>
+              <td><span class="badge badge-local">Local Sandbox</span></td>
+              <td>Recommends optimal starting round presets (e.g. Amateur vs Pro championship timing).</td>
+            </tr>
+            <tr>
+              <td><strong>Custom Routines</strong></td>
+              <td>User-defined round durations, rest periods, warning clapper intervals, and custom preset names.</td>
+              <td><span class="badge badge-local">Local Sandbox</span></td>
+              <td>Allows athletes to quickly replay their personalized sparring or bag drill routines.</td>
+            </tr>
+            <tr>
+              <td><strong>Workout History</strong></td>
+              <td>Completed round count, session duration (seconds), approximate calories burned estimate, date/time timestamp.</td>
+              <td><span class="badge badge-local">Local Sandbox</span></td>
+              <td>Displays your historical training logs and streak counter inside the app.</td>
+            </tr>
+            <tr>
+              <td><strong>App Preferences</strong></td>
+              <td>Theme mode (dark/light/system), preferred bell chime sound, virtual coach cadence, preparation countdown (0-60s), language choice.</td>
+              <td><span class="badge badge-local">Local Sandbox</span></td>
+              <td>Preserves your selected acoustic and visual configurations across app sessions.</td>
+            </tr>
+            <tr>
+              <td><strong>Rating Prompt State</strong></td>
+              <td>Session counter and local flag indicating whether an in-app review prompt was presented.</td>
+              <td><span class="badge badge-local">Local Sandbox</span></td>
+              <td>Prevents repetitive review prompts and respects store presentation cooldowns.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="policy-section" id="permissions">
+      <div class="section-title">
+        <span class="section-num">04</span>
+        <h2>Device Permissions & Hardware Sensor Usage</h2>
+      </div>
+      <p>
+        Boxing and combat sports present unique physical demands: athletes wear 16oz boxing gloves, wraps, and sweat. 
+        Combat Clock leverages native device hardware features to provide hands-free control, acoustic penetration, 
+        and visual alert signals. Here is a comprehensive breakdown of every permission and sensor used:
+      </p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission / Sensor</th>
+              <th>Platform</th>
+              <th>Type</th>
+              <th>Technical Function & Privacy Guarantee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hardware Proximity Sensor</strong></td>
+              <td>iOS / Android</td>
+              <td><span class="badge badge-hardware">Hardware Sensor</span></td>
+              <td>
+                <strong>Feature: Wave-to-Pause (Hands-Free Control)</strong><br>
+                Uses the device's front infrared proximity sensor (<code>UIDevice.isProximityMonitoringEnabled</code>). 
+                Allows athletes wearing boxing gloves to wave their hand near the top speaker to pause/resume rounds without touching the screen.
+                <br><em>Guarantee: Reads only a binary proximity state (Near / Far). No camera feeds, facial imagery, or biometric measurements are accessed or captured.</em>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>LED Camera Flashlight / Torch</strong></td>
+              <td>iOS / Android</td>
+              <td><span class="badge badge-hardware">Hardware Control</span></td>
+              <td>
+                <strong>Feature: Visual Strobe Flash Alert</strong><br>
+                Activates the rear camera LED torch via platform torch mode (<code>AVCaptureDevice.torchMode</code>) to flash 3 times at round start, 10s warning, and round end.
+                <br><em>Guarantee: Used strictly as a visual flashlight strobe for deaf, hard-of-hearing, or headphone-wearing fighters. Combat Clock NEVER accesses the camera lens, photos, or video stream.</em>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Background Audio Playback</strong></td>
+              <td>iOS: <code>audio</code> Background Mode<br>Android: <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+              <td><span class="badge badge-secure">System Service</span></td>
+              <td>
+                <strong>Feature: Background Bell & Voice Coach Audio</strong><br>
+                Ensures round bells, countdown beeps, and combination callouts continue playing seamlessly when your screen locks or when multitasking.
+                <br><em>Guarantee: Only plays pre-bundled local audio assets and synthesizes local speech. Does not record or monitor microphone audio.</em>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Live Activities & Dynamic Island</strong></td>
+              <td>iOS: <code>NSSupportsLiveActivities</code><br>ActivityKit</td>
+              <td><span class="badge badge-secure">System Extension</span></td>
+              <td>
+                <strong>Feature: Lock Screen Combat Timer HUD</strong><br>
+                Presents the active round number, work/rest phase, and live seconds countdown on the iOS Lock Screen and Dynamic Island.
+                <br><em>Guarantee: All state updates are computed locally on your device. No data is transmitted to Apple servers or external relays.</em>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Notifications</strong></td>
+              <td>iOS: <code>UNUserNotificationCenter</code><br>Android: <code>POST_NOTIFICATIONS</code></td>
+              <td><span class="badge badge-secure">User Consent</span></td>
+              <td>
+                <strong>Feature: Workout Notifications</strong><br>
+                Presents real-time workout status alerts and lock screen countdown banners while active.
+                <br><em>Guarantee: All notifications are generated locally by your device OS. No remote push notification servers (APNs/FCM) are used.</em>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Accelerometer & Motion</strong></td>
+              <td>iOS / Android (<code>CMMotionManager</code>)</td>
+              <td><span class="badge badge-hardware">Hardware Sensor</span></td>
+              <td>
+                <strong>Feature: Shake-to-Skip Corner Rest</strong><br>
+                Detects a deliberate device shake to skip corner rest and jump directly into the next round.
+                <br><em>Guarantee: Motion events are processed ephemerally in real-time memory. No motion logging or position profiling is retained.</em>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Haptic Engine / Vibrator</strong></td>
+              <td>iOS Taptic Engine / Android Vibrator</td>
+              <td><span class="badge badge-hardware">Hardware Control</span></td>
+              <td>
+                <strong>Feature: Silent Gym Tactile Feedback</strong><br>
+                Triggers distinct tactile vibration cues for round bells, warning clappers, and button taps for quiet apartment or early morning training.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Keep Screen Awake</strong></td>
+              <td>Android: <code>WAKE_LOCK</code><br>iOS: <code>isIdleTimerDisabled</code></td>
+              <td><span class="badge badge-secure">System Control</span></td>
+              <td>
+                <strong>Feature: Always-On Round Clock</strong><br>
+                Prevents the display from dimming or going to sleep during active rounds so the giant timer numerals remain visible across the gym.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="policy-section" id="third-party">
+      <div class="section-title">
+        <span class="section-num">05</span>
+        <h2>Third-Party Services & Operating System APIs</h2>
+      </div>
+      <p>
+        Combat Clock minimizes dependencies on external code. Here are the only platform-provided frameworks integrated into the application:
+      </p>
+      <ul>
+        <li>
+          <strong>Apple StoreKit & Google Play In-App Review:</strong> We utilize official operating system dialogs 
+          (<code>SKStoreReviewController</code> / Google Play In-App Review API) to allow satisfied users to rate the app. 
+          This interaction is managed directly by your device's operating system. We receive zero identifying information regarding your review.
+        </li>
+        <li>
+          <strong>On-Device Text-To-Speech (TTS):</strong> The Virtual Coach combination announcer utilizes your device's built-in 
+          local voice synthesizer (iOS <code>AVSpeechSynthesizer</code> / Android TTS Engine). Your workout routines and punch cues 
+          are never sent to cloud speech APIs.
+        </li>
+      </ul>
+      <p>
+        <strong>No Advertising Networks:</strong> Combat Clock does not integrate Google AdMob, Unity Ads, AppLovin, or any third-party ad networks. 
+        You will never be tracked for targeted advertisements.
+      </p>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="policy-section" id="retention-deletion">
+      <div class="section-title">
+        <span class="section-num">06</span>
+        <h2>Data Retention, Control & Deletion Rights</h2>
+      </div>
+      <p>
+        Because all application data is stored strictly in your local device sandbox:
+      </p>
+      <ul>
+        <li><strong>You Have Full Control:</strong> You can edit or delete any custom workout preset directly from the Routine Builder at any time.</li>
+        <li><strong>Instant Complete Deletion:</strong> If you uninstall or delete Combat Clock from your iOS or Android device, all associated stored preferences, custom routines, onboarding answers, and workout history logs are permanently and irreversibly purged by your device's operating system.</li>
+        <li><strong>System Storage Reset:</strong> You can also instantly wipe all stored application data without uninstalling by clearing app data in your device settings (Android: Settings &gt; Apps &gt; Combat Clock &gt; Storage &gt; Clear Data; iOS: Delete and reinstall).</li>
+      </ul>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="policy-section" id="children">
+      <div class="section-title">
+        <span class="section-num">07</span>
+        <h2>Children's Privacy (COPPA & GDPR-K Compliance)</h2>
+      </div>
+      <p>
+        Combat Clock is designed for sports enthusiasts of all ages, including youth boxers and martial arts students. 
+        Because our application does not collect, transmit, or share any personal information whatsoever, 
+        we fully comply with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> in the United States, 
+        the <strong>General Data Protection Regulation (GDPR)</strong> in the European Union, and similar global child privacy legislation.
+      </p>
+      <p>
+        We do not knowingly solicit, harvest, or maintain personal information from children under the age of 13 (or under 16 in the European Union).
+      </p>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="policy-section" id="international">
+      <div class="section-title">
+        <span class="section-num">08</span>
+        <h2>International Compliance (GDPR, CCPA / CPRA)</h2>
+      </div>
+      <p>
+        <strong>European Union & United Kingdom (GDPR / UK GDPR):</strong><br>
+        Under the GDPR, you have the right to access, rectify, port, and erase your personal data. Because we do not store, 
+        collect, or transmit your personal data to any server, your personal data is already entirely under your exclusive custody on your personal device.
+      </p>
+      <p>
+        <strong>California Residents (CCPA / CPRA):</strong><br>
+        The California Consumer Privacy Act requires disclosures about personal information collection and sales. 
+        Combat Clock <strong>does not sell, rent, or share personal information</strong> with third parties for cross-context behavioral advertising, 
+        nor have we done so in the preceding 12 months.
+      </p>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="policy-section" id="updates">
+      <div class="section-title">
+        <span class="section-num">09</span>
+        <h2>Changes to This Privacy Policy</h2>
+      </div>
+      <p>
+        We may update our Privacy Policy periodically to reflect enhancements to application functionality, 
+        operating system updates, or legal compliance requirements. Any revisions will be reflected on this page with an updated "Effective Date". 
+        Since the app operates offline without user accounts, we encourage you to review this policy within the application's About/Settings section.
+      </p>
+    </section>
+
+    <!-- Section 10 -->
+    <section class="policy-section" id="contact">
+      <div class="section-title">
+        <span class="section-num">10</span>
+        <h2>Contact & Developer Information</h2>
+      </div>
+      <p>
+        If you have any questions, suggestions, or concerns regarding this Privacy Policy or our on-device privacy architecture, 
+        please contact our development team:
+      </p>
+      <ul>
+        <li><strong>Developer:</strong> Lunar Day</li>
+        <li><strong>App Title:</strong> Combat Clock &bull; Boxing Round Timer</li>
+        <li><strong>Bundle Identifier:</strong> <code>com.lunarday.boxing.timer</code></li>
+        <li><strong>Email Support:</strong> <a href="mailto:support@lunarday.com" style="color: #fda4af;">support@lunarday.com</a></li>
+        <li><strong>Website:</strong> <a href="https://lunarday.com" target="_blank" rel="noopener noreferrer" style="color: #fda4af;">https://lunarday.com</a></li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Lunar Day. All rights reserved.</p>
+      <p style="margin-top: 6px; font-size: 13px;">
+        Combat Clock &bull; Boxing Timer is built with privacy-by-design for fighters worldwide.
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>
